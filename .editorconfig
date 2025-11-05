@@ -1,0 +1,28 @@
+# If this true the current dir is the root directory for the project
+root = true
+
+[*]
+indent_style = tab
+end_of_line = lf # Unix-style lines ending \n
+charset = utf-8
+trim_trailing_whitespace = true
+insert_final_newline = true
+
+[*.go]
+indent_size = 4
+
+[*.vue]
+indent_size = 2
+
+[*.{js,ts}]
+indent_size = 4
+
+[Dockerfile]
+indent_size = 4
+
+[*.{yml,yaml}]
+indent_size = 2
+indent_style = space
+
+[*.json]
+indent_size = 4

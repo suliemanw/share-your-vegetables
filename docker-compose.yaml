@@ -1,0 +1,12 @@
+version: "3.8"
+
+services:
+  frontend:
+    image: starter-template:latest
+    ports:
+      - "8080:80"
+
+  backend:
+    image: starter-template-backend:latest
+    ports:
+      - "8081:80"
