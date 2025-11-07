@@ -4,14 +4,16 @@ WORKDIR /app
 
 COPY . .
 
-RUN go build .
+RUN go mod tidy && go build -o share-your-vegetables
 
 FROM alpine:latest
 
 WORKDIR /app
 
-COPY --from=build /app/starter-template .
+COPY --from=build /app/share-your-vegetables .
+
+COPY --from=builder /app/uploads ./uploads
 
 EXPOSE 8081
 
-CMD ["./starter-template"]
+CMD ["./share-your-vegetables"]

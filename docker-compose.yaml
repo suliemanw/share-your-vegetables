@@ -1,12 +1,14 @@
 version: "3.8"
 
 services:
+  backend:
+    build: ./backend
+    ports:
+      - "8081:8081"
+    volumes:
+      - ./backend/uploads:/app/uploads
+
   frontend:
-    image: starter-template:latest
+    build: ./frontend
     ports:
       - "8080:80"
-
-  backend:
-    image: starter-template-backend:latest
-    ports:
-      - "8081:80"
