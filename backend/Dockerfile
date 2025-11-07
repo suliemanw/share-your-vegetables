@@ -12,8 +12,6 @@ WORKDIR /app
 
 COPY --from=build /app/share-your-vegetables .
 
-COPY --from=builder /app/uploads ./uploads
-
 EXPOSE 8081
 
 CMD ["./share-your-vegetables"]
